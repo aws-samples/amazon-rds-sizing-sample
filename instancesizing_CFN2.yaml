@@ -1,0 +1,63 @@
+AWSTemplateFormatVersion: 2010-09-09                                                                                                                                                                 
+Description: CloudFormation template for creating Glue Database/Crawlers                                                                                                                                                                            
+Parameters: 
+  S3Targetbucketname:
+    Description: The name of the S3 target bucket created by Linux EC2 insatnce CF template 
+    Type: String                                                                                                                                                                                    
+
+Resources:                                                                                                                                                                                                                                    
+  MyRole:                                                                                                                                                                                                                                     
+    Type: 'AWS::IAM::Role'                                                                                                                                                                                                                    
+    Properties:  
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole                                                                                                                                                                                                                         
+      AssumeRolePolicyDocument:                                                                                                                                                                                                               
+        Version: 2012-10-17                                                                                                                                                                                                                   
+        Statement:                                                                                                                                                                                                                            
+          - Effect: Allow                                                                                                                                                                                                                     
+            Principal:                                                                                                                                                                                                                        
+              Service:                                                                                                                                                                                                                        
+                - glue.amazonaws.com                                                                                                                                                                                                          
+            Action:                                                                                                                                                                                                                           
+              - 'sts:AssumeRole'                                                                                                                                                                                                              
+      Path: /                                                                                                                                                                                                                                 
+      Policies:                                                                                                                                                                                                                               
+        - PolicyName: glueinstancesizing                                                                                                                                                                                                                    
+          PolicyDocument:                                                                                                                                                                                                                     
+            Version: 2012-10-17                                                                                                                                                                                                               
+            Statement:
+              - Effect: Allow
+                Action: 's3:*'
+                Resource: [!Sub 'arn:aws:s3:::${S3Targetbucketname}', !Sub 'arn:aws:s3:::${S3Targetbucketname}/*']
+                                                                                                                                                                                                         
+
+  instancesizingdatabase:                                                                                                                                                                                                                     
+    Type: 'AWS::Glue::Database'                                                                                                                                                                                                               
+    Properties:                                                                                                                                                                                                                               
+      CatalogId: !Ref 'AWS::AccountId'                                                                                                                                                                                                        
+      DatabaseInput:                                                                                                                                                                                                                          
+        Name: dbinstancesize                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                
+  Myinstancesizecrawler1:                                                                                                                                                                                                                     
+    Type: 'AWS::Glue::Crawler'                                                                                                                                                                        
+    Properties:                                                                                                                                                                                       
+      Name: dbinstancesizecrawler1                                                                                                                                                                              
+      Role: !GetAtt MyRole.Arn                                                                                                                                                                        
+      DatabaseName: !Ref instancesizingdatabase                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+      Targets:                                                                                                                                                                                        
+        S3Targets:                                                                                                                                                                                    
+          - Path: !Join [ '', ['s3://', !Ref S3Targetbucketname, '/performancedata'] ]                                                                                                                                                              
+                                                                                                                                                                     
+                                                                                                                                              
+  Myinstancesizecrawler2:                                                                                                                                                                             
+    Type: 'AWS::Glue::Crawler'                                                                                                                                                                        
+    Properties:                                                                                                                                                                                       
+      Name: dbinstancesizecrawler2                                                                                                                                                                              
+      Role: !GetAtt MyRole.Arn                                                                                                                                                                        
+      DatabaseName: !Ref instancesizingdatabase                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+      Targets:                                                                                                                                                                                        
+        S3Targets:                                                                                                                                                                                      
+          - Path: !Join [ '', ['s3://', !Ref S3Targetbucketname, '/instancelookup'] ]                                                                                                                                                                
+                                                                                                                                                                          
+                                                                                                                                          
+                                                                                                                                                       
