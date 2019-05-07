@@ -36,9 +36,7 @@ Parameters:
   S3Bucketname :
     Description: Enter the name of your own S3 bucket to be created to store workload information
     Type: String
-  GitHuburl :
-    Description: Enter the GitHub URL of file instancesizingtools.zip
-    Type: String
+
 
 Resources:
   myLinuxEC2Instance:
@@ -97,8 +95,6 @@ Resources:
           export PATH
           export TNS_ADMIN
           EOF
-
-          sudo -u ec2-user -- bash -c 'cd /home/ec2-user; curl -OL ${GitHuburl}; unzip instancesizingtools.zip'
     
       
 
