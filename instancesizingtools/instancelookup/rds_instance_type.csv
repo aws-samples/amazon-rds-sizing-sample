@@ -1,13 +1,128 @@
 instance_type,vcpu,memory,bandwidth
-db.m5.large,2,8,3500
-db.m5.xlarge,4,16,3500
-db.m5.2xlarge,8,32,3500
-db.m5.4xlarge,16,64,3500
-db.m5.12xlarge,48,192,7000
-db.m5.24xlarge,96,384,14000
-db.r5.large,2,16,3500
-db.r5.xlarge,4,32,3500
-db.r5.2xlarge,8,64,3500
-db.r5.4xlarge,16,128,3500
-db.r5.12xlarge,48,384,7000
-db.r5.24xlarge,96,768,14000
+db.m6i.large,2,8,Up to 10 Gbps
+db.m6i.xlarge,4,16,Up to 10 Gbps
+db.m6i.2xlarge,8,32,Up to 10 Gbps
+db.m6i.4xlarge,16,64,Up to 10 Gbps
+db.m6i.8xlarge,32,128,10 Gbps
+db.m6i.12xlarge,48,192,15 Gbps
+db.m6i.16xlarge,64,256,20 Gbps
+db.m6i.24xlarge,96,384,30 Gbps
+db.m6i.32xlarge,128,512,40 Gbps
+db.m5.large,2,8,Up to 10 Gbps
+db.m5.xlarge,4,16,Up to 10 Gbps
+db.m5.2xlarge,8,32,Up to 10 Gbps
+db.m5.4xlarge,16,64,Up to 10 Gbps
+db.m5.8xlarge,32,128,10 Gbps
+db.m5.12xlarge,48,192,12 Gbps
+db.m5.16xlarge,64,256,20 Gbps
+db.m5.24xlarge,96,384,25 Gbps
+db.m5d.large,2,8,Up to 10 Gbps
+db.m5d.xlarge,4,16,Up to 10 Gbps
+db.m5d.2xlarge,8,32,Up to 10 Gbps
+db.m5d.4xlarge,16,64,Up to 10 Gbps
+db.m5d.8xlarge,32,128,10 Gbps
+db.m5d.12xlarge,48,192,12 Gbps
+db.m5d.16xlarge,64,256,20 Gbps
+db.m5d.24xlarge,96,384,25 Gbps
+db.m4.large,2,8,Moderate
+db.m4.xlarge,4,16,High
+db.m4.2xlarge,8,32,High
+db.m4.4xlarge,16,64,High
+db.m4.10xlarge,40,160,10 Gbps
+db.m4.16xlarge,64,256,25 Gbps
+db.r6i.large,2,16,Up to 12.5 Gbps
+db.r6i.xlarge,4,32,Up to 12.5 Gbps
+db.r6i.2xlarge,8,64,Up to 12.5 Gbps
+db.r6i.4xlarge,16,128,Up to 12.5 Gbps
+db.r6i.8xlarge,32,256,12.5 Gbps
+db.r6i.12xlarge,48,384,18.75 Gbps
+db.r6i.16xlarge,64,512,25 Gbps
+db.r6i.24xlarge,96,768,37.5 Gbps
+db.r6i.32xlarge,128,1024,50 Gbps
+db.x2idn.16xlarge,64,1024,50 Gbps
+db.x2idn.24xlarge,96,1536,75 Gbps
+db.x2idn.32xlarge,128,2048,100 Gbps
+db.x2iedn.xlarge,4,128,Up to 25 Gbps
+db.x2iedn.2xlarge,8,256,Up to 25 Gbps
+db.x2iedn.4xlarge,16,512,Up to 25 Gbps
+db.x2iedn.8xlarge,32,1024,25 Gbps
+db.x2iedn.16xlarge,64,2048,50 Gbps
+db.x2iedn.24xlarge,96,3072,75 Gbps
+db.x2iedn.32xlarge,128,4096,100 Gbps
+db.x2iezn.2xlarge,8,256,Up to 25 Gbps
+db.x2iezn.4xlarge,16,512,Up to 25 Gbps
+db.x2iezn.6xlarge,24,768,50 Gbps
+db.x2iezn.8xlarge,32,1024,75 Gbps
+db.x2iezn.12xlarge,48,1536,100 Gbps
+db.r5.large,2,16,up to 10 Gbps
+db.r5.xlarge,4,32,up to 10 Gbps
+db.r5.2xlarge,8,64,up to 10 Gbps
+db.r5.4xlarge,16,128,up to 10 Gbps
+db.r5.8xlarge,32,256,10 Gbps
+db.r5.12xlarge,48,384,10 Gbps
+db.r5.16xlarge,64,512,20 Gbps
+db.r5.24xlarge,96,768,25 Gbps
+db.r5b.large,2,16,Up to 10 Gbps
+db.r5b.xlarge,4,32,Up to 10 Gbps
+db.r5b.2xlarge,8,64,Up to 10 Gbps
+db.r5b.4xlarge,16,128,Up to 10 Gbps
+db.r5b.8xlarge,32,256,10 Gbps
+db.r5b.12xlarge,48,384,10 Gbps
+db.r5b.16xlarge,64,512,20 Gbps
+db.r5b.24xlarge,96,768,25 Gbps
+db.r5.large.tpc1.mem2x,2,32,Up to 10 Gbps
+db.r5.xlarge.tpc2.mem2x,4,64,Up to 10 Gbps
+db.r5.xlarge.tpc2.mem4x,4,128,Up to 10 Gbps
+db.r5.2xlarge.tpc1.mem2x,8,128,Up to 10 Gbps
+db.r5.2xlarge.tpc2.mem4x,8,256,10 Gbps
+db.r5.2xlarge.tpc2.mem8x,8,512,20 Gbps
+db.r5.4xlarge.tpc2.mem2x,16,256,10 Gbps
+db.r5.4xlarge.tpc2.mem3x,16,384,10 Gbps
+db.r5.4xlarge.tpc2.mem4x,16,512,20 Gbps
+db.r5.6xlarge.tpc2.mem4x,24,768,25 Gbps
+db.r5.8xlarge.tpc2.mem3x,32,768,25 Gbps
+db.r5.12xlarge.tpc2.mem2x,48,768,25 Gbps
+db.r5d.large,2,16,Up to 10 Gbps
+db.r5d.xlarge,4,32,Up to 10 Gbps
+db.r5d.2xlarge,8,64,Up to 10 Gbps
+db.r5d.4xlarge,16,128,Up to 10 Gbps
+db.r5d.8xlarge,32,256,10 Gbps
+db.r5d.12xlarge,48,384,10 Gbps
+db.r5d.16xlarge,64,512,20 Gbps
+db.r5d.24xlarge,96,768,25 Gbps
+db.r5b.large.tpc1.mem2x,2,32,Up to 10 Gbps
+db.r5b.xlarge.tpc2.mem2x,4,64,Up to 10 Gbps
+db.r5b.xlarge.tpc2.mem4x,4,128,Up to 10 Gbps
+db.r5b.2xlarge.tpc1.mem2x,8,128,Up to 10 Gbps
+db.r5b.2xlarge.tpc2.mem4x,8,256,10 Gbps
+db.r5b.2xlarge.tpc2.mem8x,8,512,20 Gbps
+db.r5b.4xlarge.tpc2.mem2x,16,256,10 Gbps
+db.r5b.4xlarge.tpc2.mem3x,16,384,10 Gbps
+db.r5b.4xlarge.tpc2.mem4x,16,512,20 Gbps
+db.r5b.6xlarge.tpc2.mem4x,24,768,25 Gbps
+db.r5b.8xlarge.tpc2.mem3x,32,768,25 Gbps
+db.x1e.xlarge,4,122,Up to 10 Gbps
+db.x1e.2xlarge,8,244,Up to 10 Gbps
+db.x1e.4xlarge,16,488,Up to 10 Gbps
+db.x1e.8xlarge,32,976,Up to 10 Gbps
+db.x1e.16xlarge,64,"1,952",10 Gbps
+db.x1e.32xlarge,128,"3,904",25 Gbps
+db.x1.16xlarge,64,976,10 Gbps
+db.x1.32xlarge,128,"1,952",25 Gbps
+db.z1d.large,2,16,Up to 10 Gbps
+db.z1d.xlarge,4,32,Up to 10 Gbps
+db.z1d.2xlarge,8,64,Up to 10 Gbps
+db.z1d.3xlarge,12,96,Up to 10 Gbps
+db.z1d.6xlarge,24,192,10 Gbps
+db.z1d.12xlarge,48,384,25 Gbps
+db.r4.large,2,15.25,Up to 10 Gbps
+db.r4.xlarge,4,30.5,Up to 10 Gbps
+db.r4.2xlarge,8,61,Up to 10 Gbps
+db.r4.4xlarge,16,122,Up to 10 Gbps
+db.r4.8xlarge,32,244,10 Gbps
+db.r4.16xlarge,64,488,25 Gbps
+db.t3.small,2,2,Up to 5 Gbps
+db.t3.medium,2,4,Up to 5 Gbps
+db.t3.large,2,8,Up to 5 Gbps
+db.t3.xlarge,4,16,Up to 5 Gbps
+db.t3.2xlarge,8,32,Up to 5 Gbps
